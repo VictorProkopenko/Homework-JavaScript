@@ -9,6 +9,7 @@ console.log(num1);
 console.log(num2);
 console.log(numarray);
 console.log(bul1, bul2);
+alert(array);
 
 
 
