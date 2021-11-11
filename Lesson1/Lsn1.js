@@ -8,8 +8,7 @@ console.log(num1); console.log(num2);
 console.log(array1);
 console.log(bul1, bul2);
 alert(array0);
-alert(num1);
-alert(num2);
+alert(num1); alert(num2);
 alert(array1); //alert(array1[2]+num2); // як числа
 alert(bul1+" "+bul2);
 document.write(array0+" "+'<br \/>'); document.write(array0[0]+array0[1]+"."+array0[2]+"."+array0[3]+'<br \/>');
@@ -26,7 +25,7 @@ bul2=true;
 //Поміняємо масивам тип та значення .
 array0=[2,0,2,1];
 array1=["-999", "123", "3.14", "2.7", "16"];
-//
+//Поміняємо тип та значення
 num1="One"; num2="Ten";
 console.log(" "+array0);
 console.log(num1+" "); console.log(" "+num2);
@@ -62,17 +61,17 @@ document.write("<br \/>"+" Вітаю "+person0.middleName+" "+person0.lastName+
 let a = 100; let b = '100'; let c = true;
 console.log(typeof a); console.log(typeof b); console.log(typeof c);
 //Визначити відповідний оператор в виразах що б вийшов відповідний результат.
-//console.log(5 < 6); //logs true
-//console.log(5 >= 6); //logs false
-//console.log(5 > 6); //logs false
-//console.log(5 === 6); //logs false
-//console.log(10 === 10); //logs true
-//console.log(10 >= 10); //logs true
-//console.log(10 > 10); //logs false
-//console.log(10 < 10); //logs false
-//console.log(10 !== 10); //logs false
+console.log(5 < 6); //logs true
+console.log(5 >= 6); //logs false
+console.log(5 > 6); //logs false
+console.log(5 === 6); //logs false
+console.log(10 === 10); //logs true
+console.log(10 >= 10); //logs true
+console.log(10 > 10); //logs false
+console.log(10 < 10); //logs false
+console.log(10 !== 10); //logs false
 console.log(123 > '123'); //logs false
-console.log(123 !== '123'); //logs true
+console.log(123 === '123'); //logs true
 //Подумайте Какие значения выведет в окно браузера следующий фрагмент кода?  и почему?
 let str = "20"; a = 5;
 document.write(str + a + "<br/>"); // як символи
