@@ -71,10 +71,10 @@ console.log(10 > 10); //logs false
 console.log(10 < 10); //logs false
 console.log(10 !== 10); //logs false
 console.log(123 > '123'); //logs false
-console.log(123 === '123'); //logs true
+console.log(123 !== '123'); //logs true
 //Подумайте Какие значения выведет в окно браузера следующий фрагмент кода?  и почему?
 let str = "20"; a = 5;
-document.write(str + a + "<br/>"); // як символи
+document.write("Результат "+str + a + "тому що тип змінних перетворено до string"+"<br/>"); // як символи
 document.write(str - a + "<br/>"); // як числа
 document.write(str * "2" + "<br/>"); // як числа
 document.write(str / 2 + "<br/>"); // як числа
