@@ -3,10 +3,10 @@ let result=0; let i;
 let array1 = [];
 for(i = 0; i < 10; i++) {
     array1[i] = Math.floor(Math.random() * 100);
-    console.log(array1[i]);
+    //console.log(array1[i]);
     result=result+array1[i];
 }
-console.log(result);
+//console.log(result);
 document.write(array1+" "+'<br \/>');
 document.write("Ітого "+result+" "+'<br \/>');
 //2. Створити об'єкт book з наступними полями  - назва, кількість сторінок, жанр
@@ -35,8 +35,12 @@ for(i = 0; i < 3; i++) {
     document.write(" "+books[i]+'<br \/>');
 }
 //5. Напишіть код, який вираховує площу прямокутника висотою 23см. (змінна height) та шириною 10см (змінна width). s
-let height=23; let width=23; let s; s = height * width;
-document.write("Площа прямокутника висотою "+height+" см та шириною "+width+" см "+s+" см²"+'<br \/>');
-//6. Напиши код, який знаходить об'єм циліндра заввишки 10м (змінна heightC) та діаметром основи 4м (dC)
-let heightC=10; let dC=4; let v; v = heightC * dC;
-document.write("Oб'єм циліндра заввишки "+heightC+" м та та діаметром основи "+dC+" м "+v+" м²"+'<br \/>');
+let height=23; let width=10; let s; s = height * width;
+document.write("Площа прямокутника висотою "+height+" см та шириною "+width+" см дорівнює "+s+" см²"+'<br \/>');
+//6. Напиши код, який знаходить об'єм циліндра заввишки 10м (змінна heightC) та діаметром основи 4м (dC) v=h*Π*d2/4
+let heightC=10; let dC=4; let v; v = (heightC * dC * dC * 3.1415926535) / 4;
+document.write("Oб'єм циліндра заввишки "+heightC+" м та та діаметром основи "+dC+" м "+'<br \/>'+" дорівнює "+v+" м³"+'<br \/>');
+//7. У прямокутного трикутника дві сторони n (зі значенням 3) та m (зі значенням 4).
+// Знайдіть гіпотенузу kk=nn+mm за теоремою Піфагора (потрібно використовувати функцію Math.pow (число, ступінь) або оператор зведення в ступінь **).
+let n=3; let m=4; let k; k = (Math.pow(n,2)+Math.pow(m,2)); k = Math.sqrt(k);
+document.write("Гіпотенуза у прямокутому трикутнику зі сторонами "+n+"  та "+m+" дорівнює "+k+'<br \/>');
