@@ -74,9 +74,11 @@ console.log(123 > '123'); //logs false
 console.log(123 !== '123'); //logs true
 //Подумайте Какие значения выведет в окно браузера следующий фрагмент кода?  и почему?
 let str = "20"; a = 5;
-document.write("Результат "+str + a + "тому що тип змінних перетворено до string"+"<br/>"); // як символи
-document.write(str - a + "<br/>"); // як числа
-document.write(str * "2" + "<br/>"); // як числа
-document.write(str / 2 + "<br/>"); // як числа
+document.write("Змінні str = \"20\" та a = 5"+ "<br/>");
+document.write("Результат str + a "+str + a + " тому що тип змінних перетворено до string"+"<br/>"); // як string
+document.write(str - a );  document.write(" Тому що тип змінних str - a перетворено до "+(typeof (str - a))+ "<br/>"); // як number
+document.write(str * "2"); document.write(" Тому що тип змінних str * \"2\" перетворено до "+(typeof (str * "2")) + "<br/>");  // як number
+document.write(str / 2);  document.write(" Тому що тип змінних str / 2 перетворено до "+(typeof (str / 2)) + "<br/>"); // як number
+
 
 
