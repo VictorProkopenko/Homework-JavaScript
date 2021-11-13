@@ -1,0 +1,7 @@
+body, html {
+    scroll-behavior: smooth;
+    background: darkgrey;
+    color: white;
+    font-size: 18px;
+    width: 700px;
+}
