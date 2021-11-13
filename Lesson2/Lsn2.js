@@ -42,35 +42,37 @@ console.log(a);
 
 // 5. Скласти розклад на тиждень за домопоги switch. Користувач вводить порядковий номер дня тижня і на екрані відображається інфа що заплановано на цей день.
 
-// let dayOfWeeks = +prompt('Введіть день тижня від 1 до 7')
-// switch (dayOfWeeks) {
-//     case 1:
-//         console.log('ПОНЕДІЛОК: сісти на ДІЄТУ');
-//         break;
-//     case 2:
-//         console.log('ВІВТОРОК: піти в зал');
-//         break;
-//     case 3:
-//         console.log('СЕРЕДА: купити продукти');
-//         break;
-//     case 4:
-//         console.log('ЧЕТВЕР: заправити машину');
-//         break;
-//     case 5:
-//         console.log('ПЯТНИЦЯ: вигуляти собаку');
-//         break;
-//     case 6:
-//         console.log('СУБОТА: прибрати вдома');
-//         break;
-//     case 7:
-//         console.log('НЕДІЛЯ: відпочинок!!!');
-//         break;
-//     default:
-//         console.log("Ти щось не то ввів");
-// }
+let dayOfWeeks;
+dayOfWeeks = parseInt(prompt('Введіть день тижня від 1 до 7'));
+//console.log(dayOfWeeks);
+switch (dayOfWeeks) {
+    case 1:
+        console.log('ПОНЕДІЛОК: вперед до праці!');
+         break;
+    case 2:
+         console.log('ВІВТОРОК: вперед до праці!');
+         break;
+    case 3:
+         console.log('СЕРЕДА: вперед до праці!');
+         break;
+    case 4:
+         console.log('ЧЕТВЕР: вперед до праці!');
+         break;
+     case 5:
+         console.log('ПЯТНИЦЯ: вперед до праці!');
+         break;
+     case 6:
+         console.log('СУБОТА: вперед до праці!');
+         break;
+    case 7:
+         console.log('НЕДІЛЯ: відпочинок!!!');
+         break;
+     default:
+        console.log("Спробуй ще раз");
+ }
 
 
-// - Потрібно визначити Високосний рік чи ні. Високосні роки діляться націло на 2.
+// Потрібно визначити Високосний рік чи ні. Високосні роки діляться націло на 4.
 
 // let year = +prompt('Введіть кількість днів в цьому році');
 //
