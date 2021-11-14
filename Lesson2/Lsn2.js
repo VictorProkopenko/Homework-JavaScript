@@ -91,9 +91,9 @@ if (!!(year)) {
 // 7. Використовуючи конструкцію if..else, напишіть код, який запитуватиме: „Яка «офіційна» назва JavaScript?“<br>
 //    Якщо користувач вводить «ECMAScript», то показати: «Правильно!», інакше – відобразити: «Не знаєте? ECMAScript!<br>
 
-// let oficialName = prompt('Яка «офіційна» назва JavaScript?');
-// if(oficialName === 'ECMAScript'){
-//    alert('Правильно, гарна робота');
-// } else{
-//    alert('Неправильно, офіційна назва - ECMAScript!');
-// }
+let oficialName = prompt('Реалізаціею якого стандарту є мова JavaScript? (Яка «офіційна» назва JavaScript?)');
+if(oficialName.toLowerCase() === 'ecmascript'){
+    alert(oficialName+' правильно!');
+ } else{
+    alert('Не знаєте? ECMAScript!');
+ }
