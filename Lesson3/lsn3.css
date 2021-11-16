@@ -1,0 +1,28 @@
+body, html {
+    scroll-behavior: smooth;
+    background: darkgrey;
+    color: white;
+    font-size: 18px;
+    width: 1000px;
+}
+.wrap {
+    width: 800px;
+    display: flex;
+    justify-content:  space-evenly;
+    background:  gray;
+    flex-wrap: wrap;
+    column-gap: 20px;
+}
+.box {
+    width: 550px;
+    height: auto;
+
+}
+.a {
+    background: grey;
+
+}
+.b {
+    background: gray;
+
+}
