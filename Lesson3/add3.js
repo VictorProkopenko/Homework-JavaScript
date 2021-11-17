@@ -99,7 +99,8 @@ for (i = 0; i<50; i++) {
                 ii++;
         }
 }
-document.write(` <br/> 9. Дано 2 масиви з рівною кількістю об'єктів З'єднати в один об'єкт користувача та місто з відповідними "id" та "user_id" Записати цей об'єкт в новий масив <br/> `);
+document.write(` <br/> 9. Дано 2 масиви з рівною кількістю об'єктів З'єднати в один об'єкт користувача та місто з відповідними "id" та "user_id" 
+ Записати цей об'єкт в новий масив <br/> `);
 let usersWithId = [
         {id: 1, name: 'vasya', age: 31, status: false},
         {id: 2, name: 'petya', age: 30, status: true},
@@ -112,12 +113,12 @@ let citiesWithId = [
         {user_id: 2, country: 'Poland', city: 'Krakow'},
         {user_id: 4, country: 'USA', city: 'Miami'}
 ];
-console.log(citiesWithId);
+//console.log(citiesWithId);
 let usersWithCities = [
-        {id: 1, name: 'vasya', age: 31, status: false, address: { user_id: 1, country: 'Ukraine', city: 'Ternopil'}},
-        {id: 2, name: 'vasya', age: 31, status: false, address: { user_id: 1, country: 'Ukraine', city: 'Ternopil'}},
-        {id: 3, name: 'vasya', age: 31, status: false, address: { user_id: 1, country: 'Ukraine', city: 'Ternopil'}},
-        {id: 4, name: 'vasya', age: 31, status: false, address: { user_id: 1, country: 'Ukraine', city: 'Ternopil'}},
+        {id: 1, name: 'name', age: 0, status: false, address: { user_id: 1, country: 'country', city: 'city'}},
+        {id: 1, name: 'name', age: 0, status: false, address: { user_id: 1, country: 'country', city: 'city'}},
+        {id: 1, name: 'name', age: 0, status: false, address: { user_id: 1, country: 'country', city: 'city'}},
+        {id: 1, name: 'name', age: 0, status: false, address: { user_id: 1, country: 'country', city: 'city'}}
         ]
 for (i=0; i<usersWithId.length; i++) {
         console.log(usersWithId[i].id);
@@ -125,9 +126,54 @@ for (i=0; i<usersWithId.length; i++) {
         usersWithCities[i].name = usersWithId[i].name;
         usersWithCities[i].age = usersWithId[i].age;
         usersWithCities[i].status = usersWithId[i].status;
-        usersWithCities[i].address.user_id = citiesWithId[i].user_id;
-        usersWithCities[i].address.country = citiesWithId[i].country;
-        usersWithCities[i].address.city = citiesWithId[i].city;
+        ii=0;
+        while (ii<4) {
+                if (usersWithCities[i].id === citiesWithId[i].user_id) {
+                usersWithCities[i].address.user_id = citiesWithId[i].user_id;
+                usersWithCities[i].address.country = citiesWithId[i].country;
+                usersWithCities[i].address.city = citiesWithId[i].city;
+                ii=5;
+                }
+                ii++;
+        }
 }
 console.log(usersWithCities);
+
+document.write(` <br/> Взяти масив з 10 чисел або створити його. Вивести в консоль тільки ті елементи, значення яких є парними. <br/> `);
+array1=[];
+for (i = 0; i<10; i+=1) {
+        array1[i]=i+1;
+}
+for (i = 0; i<10; i+=1) {
+        if (array1[i] % 2 === 0) {
+                console.log(array1[i]);
+        }
+}
+document.write(` <br/> Взяти масив з 10 чисел або створити його. Створити 2й порожній масив. 
+ За допомогою будь-якого циклу скопіювати значення одного масиву в інший. <br/> `);
+
+for (i = 0; i<10; i++) {
+        array1[i]=array2[i];
+}
+console.log(array1, array2);
+document.write(` <br/> Дано масив: [ 'a', 'b', 'c'] . За допомогою циклу for зібрати всі букви в слово <br/> `);
+p=" "; let strarray = [ 'a', 'b', 'c'];
+for (i = 0; i<3; i++) {
+        p=p+strarray[i];
+}
+console.log(p);
+document.write(` <br/> Дано масив: [ 'a', 'b', 'c'] . while зібрати всі букви в слово. <br/> `);
+i=0; p=" ";
+while (i < 3) {
+        p=p+strarray[i];
+        i++;
+}
+console.log(p);
+document.write(` <br/> Дано масив: [ 'a', 'b', 'c'] . За допомогою циклу for of зібрати всі букви в слово. <br/> `);
+p=" ";
+for (let n of strarray) { //перебрати його циклом for
+        p=p+n;
+}
+console.log(p);
+
 
