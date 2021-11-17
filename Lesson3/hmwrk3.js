@@ -4,10 +4,10 @@
 let array1 = []; let array2 = []; let array3 = []; let i;
 for (i = 0; i<5; i++) {
     array1[i]=i;
-    array2[i]=("X"+i);
-    if (i % 2 === 0) {array3[i]=("Y"+i);
+    array2[i]=("str "+i);
+    if (i % 2 === 0) {array3[i]=("str "+i);
     }
-    else if (i % 3 === 0) {array3[i]=true
+    else if (i % 3 === 0) {array3[i]=true //булевого типу
     }
     else {
         array3[i] = i;
@@ -22,29 +22,35 @@ console.log(array3);
 // - За допомогою циклу while вивести в документ 20 блоків h1 c довільним текстом всередині.
 // - За допомогою циклу while вивести в документ 20 блоків h1 c довільним текстом і індексом всередині
 for (i = 5; i<20; i++) {
-    if (i % 2 === 0) {array3[i]=("Z "+i);}
+    if (i % 2 === 0) {array3[i]=("txt "+i);}
     else if (i % 3 === 0) {array3[i]=true}
     else {array3[i] = i+10;}
 }
 console.log(array3);
 for (let i = 0; i < 10; i++) {
-    document.write(`<div> ${array3[i]} </div>`)
+    document.write(`  ${array3[i]}  `)
 }
+document.write(` <br/> `);
 for (let i = 0; i < 10; i++) {
     array3[i]=i+" "+array3[i];
-    document.write(`<div> ${array3[i]} </div>`)
+    document.write(`  ${array3[i]}  `)
 }
+document.write(` <br/> `);
+document.write(`<h1>`)
 i=0;
 while (i < 20) {
-    document.write(`<div><h1> ${array3[i]} </h1></div>`)
+    document.write(`  ${array3[i]} `)
     i++;
 }
+document.write(` <br/> `);
 i=0;
 while (i < 20) {
     array3[i]=i+" "+array3[i];
-    document.write(`<div><h1> ${array3[i]} </h1></div>`)
+    document.write(` ${array3[i]} `)
     i++;
 }
+document.write(`</h1>`)
+document.write(` <br/> `);
 // - Створити масив з 10 числових елементів. Вивести в консоль всі його елементи в циклі.
 // - Створити масив з 10 строкрових елементів. Вивести в консоль всі його елементи в циклі.
 // - Створити масив з 10 елементів будь-якого типу. Вивести в консоль всі його елементи в циклі.
@@ -89,7 +95,7 @@ for (i = 0; i<10; i++) {
 // - Створити цикл for на 100 ітерацій. Вивести тільки непарні кроки. через console.log + document.write
 let array4 = [];
 for (i = 0; i<10; i++) {
-    if (i % 2 === 0) {array4[i]=("XY "+i);
+    if (i % 2 === 0) {array4[i]=("str "+i);
     }
     else if (i % 3 === 0) {array4[i]=true
     }
@@ -102,22 +108,26 @@ for (i = 0; i<10; i++) {
     console.log(i);
     document.write(i);
 }
+document.write(` <br/> `);
 for (i = 0; i<100; i++) {
     console.log(i);
     document.write(i);
 }
+document.write(` <br/> `);
 for (i = 0; i<100; i+=2) {
     console.log(i);
     document.write(i);
 }
+document.write(` <br/> `);
 for (i = 0; i<100; i+=2) { // вони і так парні
     if (i % 2 === 0) {
     console.log(i);
-    document.write(`<div><h4> ${i} </h4></div>`)}
+    document.write(` ${i} `)}
 }
+document.write(` <br/> `);
 for (i = 0; i<100; i++) {
     if (i % 2 === 0) { } else {
         console.log(i);
-        document.write(`<div><h4> ${i} </h4></div>`)
+        document.write(` ${i} `)
     }
 }
