@@ -57,7 +57,8 @@ for (i = 0; i<10; i++) {
 document.write(` <br/> `);
 document.write(` 8. вивести масив в зворотньому порядку.<br/> `);
 //8. вивести масив в зворотньому порядку.
-for (var r = array1.length-1; r >= 0; r--)
+let r;
+for (r = array1.length-1; r >= 0; r--)
 {
     document.write(` ${array1[r]} `);
 }
