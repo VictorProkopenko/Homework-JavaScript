@@ -5,7 +5,7 @@ let array1 = []; let array2 = []; let array3 = []; let i;
 for (i = 0; i<5; i++) {
     array1[i]=i;
     array2[i]=("str "+i);
-    if (i % 2 === 0) {array3[i]=("str "+i);
+    if (i % 2 === 0) {array3[i]=("str "+i); //стрічкового типу
     }
     else if (i % 3 === 0) {array3[i]=true //булевого типу
     }
@@ -26,6 +26,7 @@ for (i = 5; i<20; i++) {
     else if (i % 3 === 0) {array3[i]=true}
     else {array3[i] = i+10;}
 }
+document.write(`<div class="a"> <h3> `); //10 блоків div
 console.log(array3);
 for (let i = 0; i < 10; i++) {
     document.write(`  ${array3[i]}  `)
@@ -35,6 +36,7 @@ for (let i = 0; i < 10; i++) {
     array3[i]=i+" "+array3[i];
     document.write(`  ${array3[i]}  `)
 }
+document.write(`</div> </h3>`);
 document.write(` <br/> `);
 document.write(`<h1>`)
 i=0;
