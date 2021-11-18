@@ -9,7 +9,7 @@ ddt1.js -additional
 homework2.html - homework
 lasswork2.html - classwork
 
-Lesson2 - друге домашнє та класне завдання по JS
+Lesson3 - третє домашнє та класне завдання по JS
 resolve - робота над помилками
 add3.js - additional
 additional 3.html - additional
