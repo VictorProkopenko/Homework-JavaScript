@@ -5,26 +5,26 @@
     <title>Errors</title>
 </head>
 <body>
-<!--&lt;!&ndash;        template 1.1&ndash;&gt;-->
+
+<!--        template 1.1-->
 <!--<ul>-->
 <!--    <li>ITEM OF ARRAY</li>-->
-<!--    &lt;!&ndash;-->
-<!--    інші об'єкти масиву-->
-<!--  ...-->
-<!--  ...-->
-<!--  ...-->
-<!--    &ndash;&gt;-->
+    <!--
+    інші об'єкти масиву
+  ...
+  ...
+  ...
+    -->
 <!--</ul>-->
 
-<!---------------------------------------------->
-
+------------------------------------------
 
 <!--template 2.1-->
 <!--<div>-->
 <!--    NAME- SURNAME- AGE- INFO- <img src="PHOTO" alt="">-->
 <!--</div>-->
 
-<!--&lt;!&ndash;template 2.2&ndash;&gt;-->
+<!--template 2.2-->
 <!--<div>-->
 <!--    <h2>NAME SURNAME. age is - AGE</h2>-->
 <!--    <p>INFO</p>-->
@@ -44,20 +44,18 @@
 <!--        <p>INFO</p>-->
 <!--        <img src="PHOTO" alt="">-->
 <!--    </div>-->
-<!--    &lt;!&ndash;-->
-<!--інші об'єкти з масиву-->
-<!--    ...-->
-<!--    ...-->
-<!--    ...-->
-<!--    ...-->
-<!--    &ndash;&gt;-->
+    <!--
+інші об'єкти з масиву
+    ...
+    ...
+    ...
+    ...
+    -->
 
 
 <!--</div>-->
 
-
-<!---------------------------------------------->
-
+------------------------------------------
 
 <!--        template 3.1-->
 <!--<div>-->
@@ -65,14 +63,12 @@
 <!--        <h3 class="product-title">TITLE. Price - PRICE</h3>-->
 <!--        <img src="" alt="" class="product-image">-->
 <!--    </div>-->
-<!--    &lt;!&ndash;-->
-<!--                інші об'єкти з масиву-->
-<!--                ...-->
-<!--                ...-->
-<!--                ...-->
-<!--    &ndash;&gt;-->
-
-<!--</div>-->
+    <!--
+                інші об'єкти з масиву
+                ...
+                ...
+                ...
+    -->
 
 <script>
     /*
@@ -134,16 +130,15 @@
     ];
 
     // // ============================== template2.1 =======================
-    // for (let i = 0; i < simpsons.length; i++) {
-    //     document.write(`<div>
-    //                         ${simpsons[i].name} -
-    //                         ${simpsons[i].surname} -
-    //                         ${simpsons[i].age} -
-    //                         ${simpsons[i].info} -
-    //                         <img src="${simpsons[i].photo}" alt="${simpsons[i].name}">
-    //                     </div>`);
-    // }
-
+     for (let i = 0; i < simpsons.length; i++) {
+         document.write(`<div style="width: 550px; display: flex; flex-direction: column; justify-content: center;"><h2>
+                             ${simpsons[i].name} -
+                             ${simpsons[i].surname} -
+                             ${simpsons[i].age} -</h2>
+                             ${simpsons[i].info} - </br>
+                             <img src="${simpsons[i].photo}" alt="${simpsons[i].name}">
+                         </div>`);
+     }
     // // ============================== template2.2 =======================
     // for (let i = 0; i < simpsons.length; i++) {
     //     document.write(`<div style="margin: 10px; display: flex; flex-direction: column; justify-content: center;align-items: center; border: 2px solid black">
@@ -182,12 +177,11 @@
 
 
     // =========================================      template 3.1================================
-    // for (let i = 0; i < products.length; i++) {
-    //     document.write(`<div style="width: 300px; margin: 10px; display: flex; flex-direction: column; justify-content: center;align-items: center; border: 2px solid black">
-    //                        <h3>${products[i].title}. ${products[i].price}</h3>
-    //                         <img style="width: 50%" src="${products[i].image}" alt="${products[i].title}">
-    //                     </div>`);
-    // }
+     for (let i = 0; i < products.length; i++) {
+         document.write(`<div style="width: 300px; margin: 10px; display: flex; flex-direction: column; justify-content: center;align-items: center; border: 2px solid black">
+                            <h3>${products[i].title}. ${products[i].price}</h3>
+                            <img style="width: 50%" src="${products[i].image}" alt="${products[i].title}"></div>`);
+     }
 </script>
 </body>
 </html>
