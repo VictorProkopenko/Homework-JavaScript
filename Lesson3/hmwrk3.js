@@ -29,25 +29,25 @@ for (i = 5; i<20; i++) {
  //10 блоків div
 console.log(array3);
 for (let i = 0; i < 10; i++) {
-    document.write(`<div class="a"> <h3>  ${array3[i]}  </div> </h3>`)
+    document.write(`<div class="a"> <h3> Довільний текст ${array3[i]}  </div> </h3>`)
 }
 document.write(` <br/> `);
 for (let i = 0; i < 10; i++) {
     array3[i]=i+" "+array3[i];
-    document.write(`<div class="a"> <h4>  ${array3[i]}  </div> </h4>`)
+    document.write(`<div class="a"> <h4> Довільний текст ${i} ${array3[i]}  </div> </h4>`)
 }
 document.write(` <br/> `);
 document.write(`<h1>`)
 i=0;
 while (i < 20) {
-    document.write(`  ${array3[i]} `)
+    document.write(`  Довільний текст ${array3[i]} `)
     i++;
 }
 document.write(` <br/> `);
 i=0;
 while (i < 20) {
-    array3[i]=i+" "+array3[i];
-    document.write(` ${array3[i]} `)
+    array3[i]=i+" "+array3[i]; // добавився індекс
+    document.write(` Довільний текст ${array3[i]} `)
     i++;
 }
 document.write(`</h1>`)
