@@ -26,17 +26,16 @@ for (i = 5; i<20; i++) {
     else if (i % 3 === 0) {array3[i]=true}
     else {array3[i] = i+10;}
 }
-document.write(`<div class="a"> <h3> `); //10 блоків div
+ //10 блоків div
 console.log(array3);
 for (let i = 0; i < 10; i++) {
-    document.write(`  ${array3[i]}  `)
+    document.write(`<div class="a"> <h3>  ${array3[i]}  </div> </h3>`)
 }
 document.write(` <br/> `);
 for (let i = 0; i < 10; i++) {
     array3[i]=i+" "+array3[i];
-    document.write(`  ${array3[i]}  `)
+    document.write(`<div class="a"> <h4>  ${array3[i]}  </div> </h4>`)
 }
-document.write(`</div> </h3>`);
 document.write(` <br/> `);
 document.write(`<h1>`)
 i=0;
@@ -96,15 +95,19 @@ for (i = 0; i<10; i++) {
 // - Створити цикл for на 100 ітерацій. Вивести тільки парні кроки. через console.log + document.write
 // - Створити цикл for на 100 ітерацій. Вивести тільки непарні кроки. через console.log + document.write
 let array4 = [];
+array4[0] = [2];
+array4[1] = [0];
+array4[2] = [2];
+array4[3] = [1];
+array4[4] = [true];
+array4[5] = [false];
+array4[6] = [[1,2]];
+array4[7] = [{}];
+array4[8] = ["Name"];
+array4[9] = ["Jon"];
 for (i = 0; i<10; i++) {
-    if (i % 2 === 0) {array4[i]=("str "+i);
-    }
-    else if (i % 3 === 0) {array4[i]=true
-    }
-    else {
-        array4[i] = 20+i;
-    }
     console.log(array4[i]);
+    //document.write(array4[i]);
 }
 for (i = 0; i<10; i++) {
     console.log(i);
@@ -127,8 +130,14 @@ for (i = 0; i<100; i+=2) { // вони і так парні
     document.write(` ${i} `)}
 }
 document.write(` <br/> `);
-for (i = 0; i<100; i++) {
+for (i = 0; i<100; i++) {// це був способ 1 - Створити цикл for на 100 ітерацій. Вивести тільки непарні кроки. через console.log + document.write
     if (i % 2 === 0) { } else {
+        console.log(i);
+        document.write(` ${i} `)
+    }
+}
+for (i = 0; i<100; i++) {// - Створити цикл for на 100 ітерацій. Вивести тільки непарні кроки. через console.log + document.write
+    if (i % 2 === 1) {
         console.log(i);
         document.write(` ${i} `)
     }
