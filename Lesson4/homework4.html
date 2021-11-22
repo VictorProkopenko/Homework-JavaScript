@@ -8,17 +8,18 @@
 <script src="hmwrk4.js"></script>
 
 <script>
-    let a; let b; let r; let h; //let txt; let sp; let n; let arrObj[];
-    a=5; b=7; r=12; h=10; array1=[1,"масив","перший",true];
-    calculateSquare(a, b);
+    let a; let b; let r; let h; let txt; let sp; let n; //let arrObj[];
+    a=5; b=7; r=12; h=10; array1=[1,"масив","перший",true]; txt="Довільний текст"; sp="List"; n=5; arrObj=[{id: 1, name: 'Soso', age: 55}, {id: 2, name: 'Valeriy', age: 50}, {id: 3, name: 'Ivo', age: 65}];
+
     document.write(`<div> Площа прямокутника ${a} х ${b} = ${calculateSquare(a, b)} </div>`);
     document.write(`<div> Площа кола з діаметром ${r} = ${calculateCircle(r)} </div>`);
     document.write(`<div> Площа циліндра висотою ${h} = ${calculateCilindr(h,r)} </div>`);
     typeArray(array1);
-    // document.write(`Площа ${paragraf(txt)} `);
-    // document.write(`Площа ${spisok2(sp, n)} `);
-    // document.write(`Площа ${spisokArray(arr, n)} `);
-    // document.write(`Площа ${viewArray(arrObj)} `);
+    paragraf(txt);
+    spisok(sp);
+    spisok2(sp, n);
+    spisokArray(array1);
+    viewArray(arrObj);
 
 </script>
 
