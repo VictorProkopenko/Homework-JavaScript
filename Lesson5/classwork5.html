@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Classwork 5</title>
+</head>
+<body>
+
+<script src="clsswrk5.js"></script>
+
+<script>
+    let numArray=[1000,2000,3000]; let a; let b; let c; let d;
+    a=10; b=70; c=120; d=400;
+    document.write(`<div> Мінімум = ${calculateMin(a,b,c)} </div>`);
+    document.write(`<div> Максимум = ${calculateMaxN(a,b,c)} </div>`);
+    document.write(`<div> Мінімум з масиву = ${calculateMinimum(numArray)} </div>`);
+    document.write(`<div> Максимум з масиву = ${calculateMax(numArray)} </div>`);
+    document.write(`<div> Сума масива = ${calculateArray(numArray)} </div>`);
+    document.write(`<div> Середнє арифметичне масива = ${calculateArrayMean(numArray)} </div>`);
+    document.write(`<div> Повертає найменьше = ${returnMin(a,b,c,d)} </div>`);
+    document.write(`<div> Масив рандомних чисел = ${returnRanNum(a)} </div>`);
+    document.write(`<div> Масив рандомних чисел 0-100= ${returnRanNumHd(a)} </div>`);
+    document.write(`<div> Масив рандомних чисел 0-Lim= ${returnRanNumLm(a, 500)} </div>`);
+    document.write(`<div> Масив ${(numArray)} в зворотньому порядку = ${reversArray(numArray)} </div>`);
+</script>
+
+</body>
+</html>
