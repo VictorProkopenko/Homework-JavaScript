@@ -1,12 +1,8 @@
 // - створити функцію яка приймає три числа та виводить найменьше. (Без Math.min!)
 const calculateMin = (a,b,c) => {
     let min=a;
-        if (min > b) {
-            min = b;
-        }
-        else if (min > c) {
-            min = c;
-        }
+        if (min > b) {min = b;}
+        else if (min > c) {min = c;}
     return min;}
 // - створити функцію яка приймає три числа та виводить найбільше. (Без Math.max!)
 const calculateMaxN = (a,b,c)  => {
