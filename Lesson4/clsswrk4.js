@@ -62,7 +62,34 @@ function returnMin() {
     document.write(`<div> Максимум = ${max} </div>`);
     return min;}
 // - створити функцію яка заповнює масив рандомними числами
-
+function returnRanNum(len) {
+     let ranNumArray = [];
+     for (let i = 0; i < len; i++) {
+         ranNumArray[i] = Math.round(Math.random()*10);
+     }
+    return ranNumArray;
+}
 // (цей код генерує рандомні числа в діапазоні від 0 до 100 - Math.round(Math.random()*100)) та виводить його.
+function returnRanNumHd(len) {
+    let ranNumArray = [];
+    for (let i = 0; i < len; i++) {
+        ranNumArray[i] = Math.round(Math.random()*100);
+    }
+    return ranNumArray;
+}
+
 // - створити функцію яка заповнює масив рандомними числами в діапазоні від 0 до limit. limit - аргумент, який характеризує кінцеве значення діапазону.
+function returnRanNumLm(len, lim) {
+    let ranNumArray = [];
+    for (let i = 0; i < len; i++) {
+        ranNumArray[i] = Math.round(Math.random()*lim);
+    }
+    return ranNumArray;
+}
 // - Функція приймає масив та робить з нього новий масив в зворотньому порядку. [1,2,3] -> [3, 2, 1].
+function reversArray(numArray) {
+    let rArr=[]; let i; ii = numArray.length;
+    for (i = 0; i<numArray.length; i+=1) {
+        rArr[ii]=numArray[i]; ii--;
+    }
+    return rArr;}
