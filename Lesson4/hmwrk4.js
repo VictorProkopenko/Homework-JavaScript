@@ -1,20 +1,16 @@
 // - створити функцію яка обчислює та повертає площу прямокутника зі сторонами а і б
 function calculateSquare(a,b) {
-    //console.log(arguments);
-    let square = a * b;
-    return square;
+    return a * b;
 }
 // - створити функцію яка обчислює та повертає площу кола з радіусом r
 function calculateCircle(r) {
-    //console.log(arguments);
-    let squareCircle =  3.14 * r * r;
-    return squareCircle;
+    return 3.14 * r * r;
 }
 // - створити функцію яка обчислює та повертає площу циліндру висотою h, та радіутом r
 function calculateCilindr(h,r) {
     //console.log(arguments);
-    quareCilindr =  3.14 * r * h;
-    return quareCilindr;
+    //quareCilindr =  3.14 * r * h;
+    return 3.14 * r * h;
 }
 // - створити функцію яка приймає масив та виводить кожен його елемент
 function typeArray(array1) {
@@ -49,7 +45,8 @@ function spisokArray(array1) {
 }
 // - створити функцію яка приймає масив об'єктів з наступними полями id,name,age , та виводить їх в документ. Для кожного об'єкту окремий блок.
 function viewArray(arrObj) {
+    console.log(arguments);
     for (let i = 0; i < arrObj.length; i++) {
-        document.write(`<div> ${arrObj.id} </div>`);
+        document.write(`<div> ${arrObj[i].id} ${arrObj[i].name} ${arrObj[i].age}</div>`);
     }
 }
