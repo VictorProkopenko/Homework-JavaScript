@@ -85,8 +85,9 @@ const returnRanNumLm = (len, lim) =>{
 }
 // - Функція приймає масив та робить з нього новий масив в зворотньому порядку. [1,2,3] -> [3, 2, 1].
 const reversArray = (numArray) => {
-    let rArr=[]; let i; ii = numArray.length;
+    let rArr=[]; let i; ii = numArray.length-1;
     for (i = 0; i<numArray.length; i+=1) {
         rArr[ii]=numArray[i]; ii--;
+        console.log(ii);
     }
     return rArr;}

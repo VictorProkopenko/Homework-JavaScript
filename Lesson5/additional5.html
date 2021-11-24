@@ -14,17 +14,18 @@
 <script>
     let n; let a; let b; let numArray=[1000,2000,3000,4000]; let i;
     a=40; b=50;  i=2; n=8;
-    document.write(`<div> Выведите всі числа від 1 до n (натуральне) n = ${n} </div>`);
+    document.write(`<div> Виведіть всі числа від 1 до n (натуральне) n = ${n} </div>`);
     calculateNatural(n);
-    document.write(`<div> Выведите все числа от A ${a} до B ${b} включительно </div>`);
+    document.write(`<div> Виведіть всі числа від A ${a} до B ${b} включно </div>`);
     vivodotAdoB(a,b);
     a=50; b=40;
+    document.write(`<div> Виведіть всі числа від A ${a} до B ${b} включно навпаки якщо A > B</div>`);
     vivodotAdoB(a,b);
     document.write(`<div> Функція приймає масив ${numArray} та число "i" = ${i} та міняє місцями об\`єкт який знаходиться в індексі "i" на "i+1" </div>`);
     sdvigArr(numArray, i);
     document.write(`<div>  ${numArray}  </div>`);
-    numArray=[8,20,30,8,10,8];
-    document.write(`<div> Функція яка буде переносити елементи з значенням 8 у кінець маисву ${numArray} . Зберігаючи при цьому порядок не нульових значень. </div>`);
+    numArray=[0,20,30,0,10,0];
+    document.write(`<div> Функція яка буде переносити елементи з значенням 0 у кінець маисву ${numArray} . Зберігаючи при цьому порядок не нульових значень. </div>`);
     sortEight(numArray);
     document.write(`<div>  ${numArray} </div>`);
 </script>

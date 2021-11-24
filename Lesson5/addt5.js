@@ -11,12 +11,12 @@ const vivodotAdoB = (a, b) => {
     let i; let n;
     if (a > b) {
         n = a - b;
-        for (i = 0; i <= n; i++) {
+        for (i = n; i >= 0; i--) {
             document.write(`<div> ${b + i}</div>`);
         }
     } else {
         n = b - a;
-        for (i = 0; i <= n; i++) {
+        for (i = n; i >= 0; i--) {
             document.write(`<div> ${b - i}</div>`);
         }
     }
@@ -34,7 +34,7 @@ const sdvigArr = (numArray, i) => {
 const sortEight = (numArray) => {
         let len; len = numArray.length;
     for (let i = 0; i < len; i++) {
-        if (numArray[i] === 8) {
+        if (numArray[i] === 0) {
             numArray.push(numArray.splice(i, 1)[0]); // добавити вирізати
             i--; len--; // зупинка на i скорочення кроків циклу
         }
