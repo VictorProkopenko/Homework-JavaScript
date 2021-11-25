@@ -64,7 +64,7 @@ document.write(`<div> Напишіть функцію capitalize(str), яка п
 str5 = 'каждый   охотник желает      знать';
 document.write(`<div> ${str5} </div>`);
 const capitalize = (str5) => {
-    str5 = str5.toUpperCase()[0] + str5.slice(1);//перша
+    str5 = str5.toUpperCase()[0] + str5.slice(1);//перша якшо попереду не пробіл
     let ii = -1;
     while ((ii = str5.indexOf(" ", ii + 1)) !== -1) {
         str5 = str5.slice(0, ii + 1) + str5.toUpperCase()[ii + 1] + str5.slice(ii + 2);
