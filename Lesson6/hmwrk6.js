@@ -65,9 +65,9 @@ str5 = 'каждый   охотник желает      знать';
 document.write(`<div> ${str5} </div>`);
 const capitalize = (str5) => {
     str5 = str5.toUpperCase()[0] + str5.slice(1);//перша
-    let pos = -1;
-    while ((pos = str5.indexOf(" ", pos + 1)) !== -1) {
-        str5 = str5.slice(0, pos + 1) + str5.toUpperCase()[pos + 1] + str5.slice(pos + 2);
+    let ii = -1;
+    while ((ii = str5.indexOf(" ", ii + 1)) !== -1) {
+        str5 = str5.slice(0, ii + 1) + str5.toUpperCase()[ii + 1] + str5.slice(ii + 2);
     }
     return str5;
 };
