@@ -61,10 +61,10 @@ strUp = str_to_upper(str5);
 document.write(`<div><h4>${strUp}</h4></div>`);
 //-------------------------
 document.write(`<div> Напишіть функцію capitalize(str), яка повертає рядок, у якому кожне слово починається з великої літери. </div>`);
-str5 = 'каждый охотник желает знать';
+str5 = 'каждый   охотник желает      знать';
 document.write(`<div> ${str5} </div>`);
 const capitalize = (str5) => {
-    str5 = str5.toUpperCase()[0] + str5.slice(1);
+    str5 = str5.toUpperCase()[0] + str5.slice(1);//перша
     let pos = -1;
     while ((pos = str5.indexOf(" ", pos + 1)) !== -1) {
         str5 = str5.slice(0, pos + 1) + str5.toUpperCase()[pos + 1] + str5.slice(pos + 2);
