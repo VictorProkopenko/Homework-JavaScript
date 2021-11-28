@@ -42,12 +42,26 @@ document.write(`<div> ${arr1} </div>`);
 
 document.write(`<div>- створити масив рандомних цілих числових значень (або згенерувати, за допомоги попередньої функції) . 
 за допомоги map та колбеку перетворити всі об'єкти в масиві на стрінгові.</div>`);
+arr1 = randomNat(10);
+let arr2 = arr1.map(x => x + '');
+console.log(arr2);
+document.write(`<div>  ${arr2} </div>`);
+
 document.write(`<div>- створити функцію sortNums(direction), яка прймає масив чисел, та сортує його від більшого до меньшого,
  або навпаки в залежності від значення аргументу direction.</div>`);
 let nums = [11, 21, 3];
+function sortNums(arr, direction) {
+    if (direction === 'top') {
+        arr.sort((a, b) => b - a);
+    } else {
+        arr.sort((a, b) => a - b);
+    }
+    return arr;
+}
+sortNums(nums,'top') // [3,11,21]
 console.log(nums);
-// sortNums('ascending') // [3,11,21]
-// sortNums('descending') // [21,11,3]
+sortNums(nums,'bottom') // [21,11,3]
+console.log(nums);
 let coursesAndDurationArray = [
     {title: 'JavaScript Complex', monthDuration: 5},
     {title: 'Java Complex', monthDuration: 6},
@@ -59,5 +73,9 @@ let coursesAndDurationArray = [
 console.log(coursesAndDurationArray[0]);
 document.write(`<div>є масив coursesAndDurationArray</div>`);
 document.write(`<div>відсортувати його за спаданням за monthDuration</div>`);
-document.write(`<div>відфільтрувати , залишивши тільки курси з тривалістю більше 5 місяців</div>`);
+arr1 = coursesAndDurationArray.sort((a, b) => b.monthDuration - a.monthDuration);
 
+console.log(arr1);
+document.write(`<div>відфільтрувати , залишивши тільки курси з тривалістю більше 5 місяців</div>`);
+arr1 = coursesAndDurationArray.filter(a => a.monthDuration>5);
+console.log(arr1);
