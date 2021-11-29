@@ -115,11 +115,12 @@ str = "Сила тяжести приложена к центру масс те�
 // document.writeln(cutString(str, 5)) // 'Сила тяжести приложена к центру'
 document.write(`<div>Напишіть функцію cutString2(str, n), яка видаляє зайві слова з рядка
  str= ${str}. залишивши у ній n слів. </div>`);
-function cutString2(str, n) {let nn=1; let ii = -1; arrcut='';
-    while ((ii = str.indexOf(' ', ii + 1)) !== -1) {
-        arrcut=arrcut+str.slice(ii,str.indexOf(' ', ii + 1));
-        nn++;
-        if (nn>n) { return arrcut; }
+
+function cutString2(str, n) {let nn=1; let ii = str.indexOf(' '); let arrcut=str.slice(0,ii);
+    while (nn<n) {
+         arrcut=arrcut+str.slice(ii,str.indexOf(' ', ii + 1));
+         ii=str.indexOf(' ', ii + 1);
+         nn++;
 }
     return arrcut;
 }
