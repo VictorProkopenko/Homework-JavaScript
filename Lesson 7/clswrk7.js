@@ -121,13 +121,10 @@ for (let i=0;i<10;i++) {
 console.log(cinderellas);
 let prince = new Prince('Garry', 30, 36);
 for (let i=0; i<cinderellas.length; i++) {
-    //console.log(cinderellas[i].fSize, prince.fSize);
     if (cinderellas[i].fSize === prince.fSize) {
         console.log(prince);
         console.log(`Знайшов  = ${cinderellas[i].name}`);
         i=cinderellas.length;
-    } else {
-        console.log(`Не знайшов`);
     }
 }
 console.log(cinderellas.find(sFind => sFind.fSize === prince.fSize));
