@@ -25,7 +25,7 @@ document.body.appendChild(cloneBlock1);
 let array1 = ['Main', 'Products', 'About us', 'Contacts'];
 let menuClass = document.getElementsByClassName('menu');
 console.log(menuClass[0]);
-function getListContent() {
+function getList() {
     let result = [];
     for(let i=0; i<array1.length; i++) {
         let li = document.createElement('li');
@@ -34,7 +34,7 @@ function getListContent() {
     }
     return result;
 }
-menuClass[0].append(...getListContent());
+menuClass[0].append(...getList());
 
 // // - Є масив
 let coursesAndDurationArray;
