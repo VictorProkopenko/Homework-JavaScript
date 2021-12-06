@@ -143,6 +143,26 @@ coursesArray= [
         modules: ['html', 'css', 'js', 'mysql', 'mongodb', 'react', 'angular', 'aws', 'docker', 'git', 'sass']
     }
 ];
+for (let coursesArrayElement of coursesArray) {
+    let blockElement = document.createElement('block');
+    let blockTitle  = document.createElement('h3');
+    let blockMonthHour  = document.createElement('div');
+    let blockModules = document.createElement('ul');
+    blockTitle.innerText  = coursesArrayElement.title ;
+    blockMonthHour.innerText  = 'Місяців  '+coursesArrayElement.monthDuration+' Годин '+coursesArrayElement.hourDuration ;
+    blockTitle.append()
+    for (let coursesArrayElementElement of coursesArrayElement.modules) {
+        let li = document.createElement('li');
+        li.innerHTML = coursesArrayElementElement+' ';
+        blockModules.append(li);
+    }
+    blockElement.append(blockTitle);
+    blockElement.append(blockMonthHour);
+    blockElement.append(blockModules);
+    document.body.append(blockElement);
+
+}
+
+
 // Створити для кожного елементу масиву свій блок, блок розділити блоками, в яких будуть зберігатись значення окремих властивостей,
 // для властивості modules зробити список з елементами
-// Приклад структири знаходиться у файлі example.png
