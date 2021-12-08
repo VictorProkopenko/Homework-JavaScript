@@ -16,6 +16,10 @@ document.getElementById('btn1').onclick = function () {
 // (Додаткова частина для завдання)
 //
 //
+let tabl = document.getElementById('form3');
+console.log(tabl);
+
+
 // - Сворити масив не цензцрних слів.
 //     Сворити інпут текстового типу.
 //     Якщо людина вводить слово і воно міститься в масиві не цензурних слів
