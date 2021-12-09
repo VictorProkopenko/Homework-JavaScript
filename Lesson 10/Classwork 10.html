@@ -21,19 +21,28 @@
 <div>
     <button id="btn1">Submit</button>
 </div>
-<form name="form3">
+<form name="form3" onsubmit="buildTable();return false;">
     <div>
-        <input type="number" name="row"> <span id="result11"></span>
-        <input type="number" name="col">
-        <input type="text" name="cont">
+        <input type="number" name="row"> row
+        <input type="number" name="col"> col
+        <input type="text" name="cont"> content
+        <p><input type="submit" value="Таблиця"></p>
     </div>
 </form>
-<div>
-    <button id="btn2">Submit</button>
-</div>
+
+<form name="form4" onsubmit="testCenz2(3);return false;">
+    <div>
+        <input type="text" name="cenz"> Перевірка слова, не можна - test1 test2 test3
+    </div>
+</form>
+
+<form name="form5" onsubmit="testCenz2(4);return false;">
+    <div>
+        <input type="text" name="cenz"> Перевірка слова, не можна - test1 test2 test3
+        <p><input type="submit" value="Перевірка"></p>
+    </div>
+</form>
 
 <script src="clswrk10.js"></script>
-
-
 </body>
 </html>
