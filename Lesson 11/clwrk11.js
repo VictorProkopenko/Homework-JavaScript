@@ -24,24 +24,25 @@ for (let user of users) {
     let button = document.createElement('button');
     button.innerText = ' in favorites';
     blockUsers.innerText = 'Ім\'я '+user.name+' вік ' +user.age+' статус '+user.status;
-    button.onclick = function () {
-        if (clickTrigger3) {
-            button.innerText = ' out favorites';
-            favorites.push({user});
-            console.log(favorites);
-            localStorage.setItem('favorites', JSON.stringify(favorites));
-        } else {
-            button.innerText = ' in favorites';
-            //favoritess = favorites.filter(item => item !== user.name);
-            favorites = favorites.filter(function (item){return item.name !== user.name  && item.age !== user.age});
-            console.log(favorites);
-            localStorage.setItem('favorites', JSON.stringify(favorites));
-        }
-        clickTrigger3 = !clickTrigger3;
-        console.log(clickTrigger3);
-
-    };
     blockElement.append(blockUsers);
     blockElement.append(button);
     document.body.append(blockElement);
+    button.onclick = function () {
+    clickTrigger3 = favorites.includes(user);
+        //clickTrigger3 = !clickTrigger3;
+        if (clickTrigger3) {
+            button.innerText = ' out favorites';
+            favorites.push({user});
+
+            localStorage.setItem('favorites', JSON.stringify(favorites));
+        } else {
+            button.innerText = ' in favorites';
+            favorites = favorites.filter(function (item){return item.name !== user.name  && item.age !== user.age});
+
+            localStorage.setItem('favorites', JSON.stringify(favorites));
+        }
+        console.log(clickTrigger3,favorites);
+
+    };
+
 }
