@@ -28,16 +28,16 @@ for (let user of users) {
     blockElement.append(button);
     document.body.append(blockElement);
     button.onclick = function () {
-    clickTrigger3 = favorites.includes(user);
-        //clickTrigger3 = !clickTrigger3;
+    clickTrigger3 = favorites.includes(user.name);
+        console.log(user.name);
         if (clickTrigger3) {
-            button.innerText = ' out favorites';
-            favorites.push({user});
-
-            localStorage.setItem('favorites', JSON.stringify(favorites));
-        } else {
             button.innerText = ' in favorites';
             favorites = favorites.filter(function (item){return item.name !== user.name  && item.age !== user.age});
+            localStorage.setItem('favorites', JSON.stringify(favorites));
+
+        } else {
+            button.innerText = ' out favorites';
+            favorites.push({user});
 
             localStorage.setItem('favorites', JSON.stringify(favorites));
         }
