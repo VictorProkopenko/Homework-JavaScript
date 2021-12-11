@@ -32,13 +32,12 @@ for (let user of users) {
         console.log(user.name);
         if (clickTrigger3) {
             button.innerText = ' in favorites';
-            favorites = favorites.filter(function (item){return item.name !== user.name  && item.age !== user.age});
-            localStorage.setItem('favorites', JSON.stringify(favorites));
-
+            let favoritess = [ ];
+            favoritess = favorites.filter(function (item){return item.name !== user.name  && item.age !== user.age});
+            localStorage.setItem('favorites', JSON.stringify(favoritess));
         } else {
             button.innerText = ' out favorites';
             favorites.push({user});
-
             localStorage.setItem('favorites', JSON.stringify(favorites));
         }
         console.log(clickTrigger3,favorites);
