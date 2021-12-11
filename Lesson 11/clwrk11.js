@@ -17,7 +17,7 @@ let users = [
 // Створити сторніку favorites.html при переході на яку потрібно вивест в документ всіх обраних на попередньому етапі.
 let favorites = JSON.parse(localStorage.getItem('favorites')) || [ ];
 console.log(favorites);
-let clickTrigger3 = true;
+let clickTrigger3 = -1;
 for (let user of users) {
     let blockElement = document.createElement('target');
     let blockUsers = document.createElement('div');
@@ -28,11 +28,14 @@ for (let user of users) {
     blockElement.append(button);
     document.body.append(blockElement);
     button.onclick = function () {
-    clickTrigger3 = favorites.includes(user.name);
+    //clickTrigger3 = favorites.includes(`${user.name}`);
+        clickTrigger3 = favorites.indexOf(`${user.name}`);
+        console.log(clickTrigger3,favorites);
         console.log(user.name);
-        if (clickTrigger3) {
+        if (clickTrigger3!==-1) {
             button.innerText = ' in favorites';
             let favoritess = [ ];
+            console.log(user.name);
             favoritess = favorites.filter(function (item){return item.name !== user.name  && item.age !== user.age});
             localStorage.setItem('favorites', JSON.stringify(favoritess));
         } else {
@@ -40,6 +43,7 @@ for (let user of users) {
             favorites.push({user});
             localStorage.setItem('favorites', JSON.stringify(favorites));
         }
+        clickTrigger3++;
         console.log(clickTrigger3,favorites);
 
     };
