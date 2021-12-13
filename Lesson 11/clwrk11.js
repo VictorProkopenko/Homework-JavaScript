@@ -15,37 +15,35 @@ let users = [
 
 // створити під кожен об'єкт свій блок з конопкою "додати до улюблених" при натисканні на яку об'єкт потрапляє до масиву favorites улюблених обраних об'єктів в локальному сховищі.
 // Створити сторніку favorites.html при переході на яку потрібно вивест в документ всіх обраних на попередньому етапі.
-let favorites = JSON.parse(localStorage.getItem('favorites')) || [ ];
-console.log(favorites);
-let clickTrigger3 = -1;
+let favorites = JSON.parse(localStorage.getItem('favorites')) || [];
+let clickTrigger3 = true;
 for (let user of users) {
     let blockElement = document.createElement('target');
     let blockUsers = document.createElement('div');
-    let button = document.createElement('button');
-    button.innerText = ' in favorites';
+    let button = document.createElement('button'); //button.className = 'btn';
     blockUsers.innerText = 'Ім\'я '+user.name+' вік ' +user.age+' статус '+user.status;
     blockElement.append(blockUsers);
     blockElement.append(button);
     document.body.append(blockElement);
+    clickTrigger3 = favorites.some(e => e.name === user.name && e.age === user.age);
+    if (clickTrigger3===false) {
+        button.innerText = 'in favorites';
+    } else {
+        button.innerText = 'out favorites';
+    }
     button.onclick = function () {
-    //clickTrigger3 = favorites.includes(`${user.name}`);
-        clickTrigger3 = favorites.indexOf(`${user.name}`);
-        console.log(clickTrigger3,favorites);
-        console.log(user.name);
-        if (clickTrigger3!==-1) {
-            button.innerText = ' in favorites';
-            let favoritess = [ ];
-            console.log(user.name);
-            favoritess = favorites.filter(function (item){return item.name !== user.name  && item.age !== user.age});
+        let favoritess = [] ;
+        let tmp = event.target.innerText; //?
+        console.log(tmp);
+        if (tmp === 'out favorites') {
+            button.innerText = 'in favorites';
+            favoritess = favorites.filter(function (item){return (item.name !== user.name || item.age !== user.age || item.status !== user.status) });
             localStorage.setItem('favorites', JSON.stringify(favoritess));
+            favorites = JSON.parse(localStorage.getItem('favorites')) || [];
         } else {
-            button.innerText = ' out favorites';
-            favorites.push({user});
+            button.innerText = 'out favorites';
+            favorites.push(user);
             localStorage.setItem('favorites', JSON.stringify(favorites));
         }
-        clickTrigger3++;
-        console.log(clickTrigger3,favorites);
-
     };
-
 }
