@@ -20,7 +20,15 @@ fetch('https://jsonplaceholder.typicode.com/posts')
                 fetch(`https://jsonplaceholder.typicode.com/posts/${postsArrayElement.id}/comments`)
                     .then(comment => comment.json())
                     .then(commentArray => {
-                        console.log(commentArray);
+
+                        for (let commentArrayElement of commentArray) {
+                            console.log(commentArrayElement.body);
+                            let divComment = document.createElement('div');
+                            // `<span style="font-style: italic ; background:blue;"> ${commentArrayElement.body}</span>`;
+                            divComment.innerHTML = `<div style="font-style: normal ; background:cadetblue;"> ${commentArrayElement.body}</div>`;
+                            divPostBody.append(divComment);
+                        }
+
                     });
             };
         }
