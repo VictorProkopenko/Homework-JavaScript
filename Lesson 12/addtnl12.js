@@ -12,42 +12,54 @@
 // website: "hildegard.org"
 fetch('https://jsonplaceholder.typicode.com/users')
     .then(users => users.json())
-    .then(postsArray => {
-        let classPosts = document.getElementsByClassName('users')[0];
-        for (let postsArrayElement of postsArray) {
-            console.log(postsArrayElement);
+    .then(usersArray => {
+        let classusers = document.getElementsByClassName('users')[0];
+        for (let usersArrayElement of usersArray) {
+            console.log(usersArrayElement);
             let divPostTitle = document.createElement('h3');
             let divPostAddress = document.createElement('div');
             let divPostId = document.createElement('div');
             let divPostMailPhone = document.createElement('div');
             let divPostBody = document.createElement('div');
             let divPostBtn = document.createElement('button');
-            divPostTitle.innerText = `Name: ${postsArrayElement.name}`;
-            divPostAddress.innerHTML = `<span style="font-style: italic ; background:yellow;"> ${postsArrayElement.address.street}</span>`;
-            divPostMailPhone.innerHTML = `<span style="background:darkseagreen;"> ${postsArrayElement.email}</span>`;
-            divPostId.innerText = `Id: ${postsArrayElement.id} Username: ${postsArrayElement.username}`;
+            divPostTitle.innerText = `Name: ${usersArrayElement.name}`;
+            divPostAddress.innerHTML = `<span style="font-style: italic ; background:yellow;"> ${usersArrayElement.address.street}</span>`;
+            divPostMailPhone.innerHTML = `<span style="background:darkseagreen;"> ${usersArrayElement.email}</span>`;
+            divPostId.innerText = `Id: ${usersArrayElement.id} Username: ${usersArrayElement.username}`;
             divPostBody.innerText = ` `;
             divPostBtn.innerText = `Пости`;
-            classPosts.append(divPostId,divPostTitle,divPostMailPhone,divPostAddress,divPostBody,divPostBtn);
+            classusers.append(divPostId,divPostTitle,divPostMailPhone,divPostAddress,divPostBody,divPostBtn);
             divPostBtn.onclick = function () {
                 fetch(`https://jsonplaceholder.typicode.com/posts`)
                     .then(post => post.json())
                     .then(postArray => {
-
                         for (let postArrayElement of postArray) {
-                            if (postArrayElement.id === postsArrayElement) {
+                            if (postArrayElement.userId === usersArrayElement.id) {
+                                let divPost = document.createElement('div');
+                                let divCommBtn = document.createElement('button');
+                                divPost.innerHTML = `<div style="font-style: normal ; background:cadetblue;"> ${postArrayElement.body}</div>`;
+                                divCommBtn.innerText = `Коментар`;
+                                divCommBtn.onclick = function () {
+                                    fetch(`https://jsonplaceholder.typicode.com/comments`)
+                                        .then(comments => comments.json())
+                                        .then .then(commentArray => {
+                                        for (let commentArrayElement of commentArray) {
+                                            if (commentArrayElement.postId === postArrayElement.id) {
+                                                let divComment = document.createElement('div');
+                                                divComment.innerHTML = `<div style="font-style: normal ; background:grey;"> ${commentArrayElement.body}</div>`;
+                                                divPost.append(divComment);
+                                            }
+
+                                        }
+                                    })
+
+                                };
+                                divPost.append(divCommBtn);
+                                divPostBody.append(divPost);
                             }
-                            let divPost = document.createElement('div');
-                            let divCommBtn = document.createElement('button');
-                            divPost.innerHTML = `<div style="font-style: normal ; background:cadetblue;"> ${postArrayElement.body}</div>`;
-                            divCommBtn.innerText = `Коментар`;
-                            divPost.append(divCommBtn);
-                            divPostBody.append(divPost);
                         }
 
                     });
             };
         }
-
-
     });
