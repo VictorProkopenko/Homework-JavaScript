@@ -1,0 +1,6 @@
+select * from cars where year>2000;
+select * from cars where year<2015;
+select * from cars where year=2008 or year=2009 or year=2010;
+select * from cars where year=price;
+select * from cars where year>2014 and model='bmw';
+select * from cars where year<2015 and model='Audi';
