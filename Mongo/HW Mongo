@@ -1,0 +1,5 @@
+db.getCollection('users').find({age:{$lt:20}}, {_id:0})
+db.getCollection('users').find( {$or : [{parents:'Tamara' }, {parents:'Petro'}]}, {_id:0})
+db.getCollection('users').find({studying:'js'} , {_id:0} )
+db.getCollection('users').updateMany({studying:{$size:1} }, {$addToSet: {studying:'java'}})
+db.getCollection('users').find({$and:[{'address.house':{$gte:1}},{'address.house':{$lte:20}}]} )
