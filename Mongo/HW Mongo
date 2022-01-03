@@ -3,3 +3,13 @@ db.getCollection('users').find( {$or : [{parents:'Tamara' }, {parents:'Petro'}]}
 db.getCollection('users').find({studying:'js'} , {_id:0} )
 db.getCollection('users').updateMany({studying:{$size:1} }, {$addToSet: {studying:'java'}})
 db.getCollection('users').find({$and:[{'address.house':{$gte:1}},{'address.house':{$lte:20}}]} )
+db.getCollection('users').find({'address.street': {$regex: / /}})
+db.getCollection('users').find({ 'studying' :{ '$exists' :false }})
+db.getCollection('users').deleteMany({ 'studying' :{ '$exists' :false }})
+db.getCollection('users').find({'parents':/na$/})
+db.getCollection('users').find({ 'python' :{ '$exists' :false }})
+db.getCollection('users').updateMany({ 'python' :{ '$exists' :false }}, {$push:{studying:'python'}})
+db.getCollection('users').find().sort( {rating:-1, 'address.flat':-1} )
+
+
+
