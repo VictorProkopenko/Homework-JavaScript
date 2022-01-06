@@ -6,27 +6,16 @@ fetch('https://jsonplaceholder.typicode.com/users')
         console.log(usersArray);
         let classUsers = document.getElementsByClassName('users')[0];
         for (let usersArrayElement of usersArray) {
-            let divUserId = document.createElement('div');
-            let divUserName = document.createElement('h5');
+            let divUserId = document.createElement('h5');
+            let divUserName = document.createElement('h3');
             let divUserBtn = document.createElement('button');
             divUserId.innerText = `Id: ${usersArrayElement.id}`;
             divUserName.innerHTML = `<span style="font-style: italic ; background:yellow;"> ${usersArrayElement.name}</span>`;
-            divUserBtn.innerText = 'Детальна інформація';
-            // <a href='user-details.html'> На сторінку товарів - в кошик</a>
+            divUserBtn.innerHTML = `<a href='user-details.html'> Детально </a>`
             classUsers.append( divUserId, divUserName, divUserBtn);
-        }
-    });
+            divUserBtn.onclick = function () {
 
-fetch('https://jsonplaceholder.typicode.com/users')
-    .then(response => {
-        console.log(response);
-        return response.json();
-    })
-    .then(users => {
-        for (const user of users) {
-            let div = document.createElement('div');
-            div.innerText = `user id - ${user.id}; user name - ${user.name}`
-            document.body.append(div);
+            }
         }
     });
 
@@ -53,12 +42,13 @@ fetch('https://jsonplaceholder.typicode.com/users')
 //         "bs": "harness real-time e-markets"
 // }
 // 2 Вывести id,name всех user в index.html. Отдельный блок для каждого user.
-// 3 Добавить каждому блоку кнопку/ссылку , при клике на которую происходит переход на страницу user-details.html, которая имеет детальную информацию про объект на который кликнули
-//
+// 3 Добавить каждому блоку кнопку/ссылку , при клике на которую происходит переход на страницу user-details.html,
+// которая имеет детальную информацию про объект на который кликнули
 //
 // На странице user-details.html:
 // 4 Вывести всю, без исключения, информацию про объект user на кнопку/ссылку которого был совершен клик ранее.
 // 5 Добавить кнопку "post of current user", при клике на которую, появляются title всех постов текущего юзера
+
 // (для получения постов используйте эндпоинт https://jsonplaceholder.typicode.com/users/USER_ID/posts)
 // 6 Каждому посту добавить кнопку/ссылку, при клике на которую происходит переход на страницу post-details.html, которая имеет детальную информацию про текущий пост.
 //
