@@ -5,8 +5,11 @@
 .wrapper {
     display: flex;
     text-align: center;
+
+
 }
  .users {
+     flex-grow: 1;
      column-count: 2;
     background-color: rgb(207,232,220);
     border: 2px solid rgb(79,185,227);
