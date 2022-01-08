@@ -3,12 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <title>Posts details</title>
+    <link rel="stylesheet" href="miniProject.css">
 </head>
 <body>
-<div id="container2"></div>
-<a href="./index.html">Home</a>
+<div class = 'cont' id="container2"></div>
+<div class = 'cmnt' id="concmnt"></div>
+<a href="./index.html">  Home</a>
 <script >
     const container2 = document.getElementById('container2');
+    const cmnt = document.getElementById('concmnt');
     let posts=`post`;
     let post = JSON.parse(localStorage.getItem(posts));
     let userPost = document.createElement('div');
@@ -21,8 +24,8 @@
         .then(comments => {
             for (let comment of comments) {
                 const userComment = document.createElement('div');
-                userComment.innerHTML = `Id:${comment.id} Name:${comment.name} Email:${comment.email}  <br> Comment: ${comment.body} `;
-                container2.appendChild(userComment);
+                userComment.innerHTML = `<h5>Id:${comment.id}</h5> Name:${comment.name} Email:${comment.email}  <br> Comment: ${comment.body}`;
+                cmnt.appendChild(userComment);
             }
         });
 

@@ -8,9 +8,9 @@ fetch('https://jsonplaceholder.typicode.com/users')
             let divUserId = document.createElement('h5');
             let divUserName = document.createElement('h3');
             let divUserBtn = document.createElement('button');
-            divUserId.innerText = `Id: ${usersArrayElement.id}`;
+            divUserId.innerHTML = `<br />Id: ${usersArrayElement.id}`;
             divUserName.innerHTML = `<span style="font-style: italic ; background:yellow;"> ${usersArrayElement.name}</span>`;
-            divUserBtn.innerHTML = `<a href='user-details.html'> Детально </a>`;
+            divUserBtn.innerHTML = `<a href='user-details.html'> Детально</a>`;
             divUserBtn.onclick = function () {
                 const userDetails = usersArrayElement;
                 const userKey=`userKey`;
